@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Account</title>
+    <!--<link href="https://bootswatch.com/united/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <style>
+        .tab-content {
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body ng-app="accountApp" style="width: 600px; margin-left: auto; margin-right: auto;">
+    <div ng-view></div>       
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <!-- Custom code to be bundled -->
+    <script src="account.js"></script>
+    <script src="Directives/passwordToggle.js"></script>
+    <script src="Directives/passwordRequire.js"></script>
+    <script src="Controllers/loginController.js"></script>
+    <script src="Controllers/registrationController.js"></script>
+    <script src="Controllers/forgotPasswordController.js"></script>
+</body>
+</html>

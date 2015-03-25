@@ -1,0 +1,57 @@
+﻿<div role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a class="text-info" role="tab" data-toggle="tab">Login</a></li>
+        <li role="presentation"><a href="#/registration" role="tab" data-toggle="tab">Registration</a></li>
+        <li role="presentation"><a href="#/forgotPassword" role="tab" data-toggle="tab">Forgot Password</a></li>
+    </ul>
+    <div class="tab-content">
+        <form name="loginForm" novalidate>
+            <div class="form-horizontal">
+                <div id="input-group-email">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="email">Email Address</label>
+                        <div class="col-md-8">
+                            <input id="email" name="email" type="email" required value="" class="form-control" ng-model="email" />
+                        </div>
+                    </div>
+                    <div class="form-group text-danger"
+                         ng-show="(loginForm.email.$dirty || loginForm.$submitted) && loginForm.email.$error.required">
+                        <span class="text-right col-md-4 hidden-sm hidden-xs glyphicon glyphicon-exclamation-sign"></span>
+                        <div class="col-md-8 danger">
+                            <span>This field is required. Please fill it out.</span>
+                        </div>
+                    </div>
+                    <div class="form-group text-danger"
+                         ng-show="loginForm.$submitted && loginForm.email.$error.email">
+                        <span class="text-right col-md-4 hidden-sm hidden-xs glyphicon glyphicon-exclamation-sign"></span>
+                        <div class="col-md-8 danger">
+                            <span>Invalid email address. Please use type a valid one (for instance: john@example.com).</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="input-group-password">
+                    <div class="form-group has-feedback">
+                        <label class="control-label col-md-4" for="password">Password</label>
+                        <div class="col-md-8">
+                            <input id="password" name="password" type="password" required value="" class="form-control" ng-model="password" />
+                            <span class="glyphicon glyphicon-eye-open form-control-feedback" data-password-toggle="password"
+                                  data-password-shown-class="glyphicon-eye-open" data-password-hidden-class="glyphicon-eye-close"></span>
+                        </div>
+                    </div>
+                    <div class="form-group text-danger" 
+                         ng-show="(loginForm.password.$dirty || loginForm.$submitted) && loginForm.password.$error.required">
+                        <span class="text-right col-md-4 hidden-sm hidden-xs glyphicon glyphicon-exclamation-sign"></span>
+                        <div class="col-md-8 danger">
+                            <span>This field is required. Please fill it out.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8 ">
+                        <input type="submit" value="Login" class="btn btn-primary pull-right" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
